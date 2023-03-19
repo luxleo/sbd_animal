@@ -1,7 +1,26 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+	reactStrictMode: false,
+	swcMinify: true,
+	async rewrites() {
+		return [
+			{
+				//NOTE: in rewrites function, there is no 'permanent' key
+				source: '/verification_code',
+				destination: `http://localhost:8000/accounts/verification_code/`,
+			},
+		];
+	},
+	// images: {
+	// 	remotePatterns: [
+	// 		{
+	// 			protocol: 'http',
+	// 			hostname: 'localhost',
+	// 			port: '8000',
+	// 			pathname: '/accounts/**',
+	// 		},
+	// 	],
+	// },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
