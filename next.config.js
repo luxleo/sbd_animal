@@ -11,16 +11,17 @@ const nextConfig = {
 			},
 		];
 	},
-	// images: {
-	// 	remotePatterns: [
-	// 		{
-	// 			protocol: 'http',
-	// 			hostname: 'localhost',
-	// 			port: '8000',
-	// 			pathname: '/accounts/**',
-	// 		},
-	// 	],
-	// },
+	images: {
+		remotePatterns: [
+			{
+				protocol: 'http',
+				hostname: 'localhost',
+				port: '8000',
+				pathname: '/accounts/**',
+			},
+		],
+		domains: ['https://sbd-animal-bucket.s3.amazonaws.com'],
+	},
 };
 
 module.exports = nextConfig;
