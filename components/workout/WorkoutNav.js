@@ -2,19 +2,15 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 import useWorkoutStore from '../../stores/workout/useWorkoutStore';
-
-import bench_pressPic from '../../public/workout_avatar/benchpress.PNG';
-import deadliftPic from '../../public/workout_avatar/deadlift.PNG';
-import squatPic from '../../public/workout_avatar/squat.PNG';
 import WorkoutChoice from './modal/WorkoutChoice';
 
 export default function WorkoutNav() {
 	const { getWorkoutGroup, getCurWorkoutState, curWorkoutState } =
 		useWorkoutStore();
 	const pics = [
-		{ pic: squatPic, name: 'squatGroup' },
-		{ pic: bench_pressPic, name: 'benchGroup' },
-		{ pic: deadliftPic, name: 'deadliftGroup' },
+		{ pic: '/workout_avatar/squat.PNG', name: 'squatGroup' },
+		{ pic: '/workout_avatar/benchpress.PNG', name: 'benchGroup' },
+		{ pic: '/workout_avatar/deadlift.PNG', name: 'deadliftGroup' },
 	];
 	const [isModal, setIsModal] = useState(false);
 	const [choiceData, setChoiceData] = useState('');
