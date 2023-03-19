@@ -4,10 +4,6 @@ import { useRouter } from 'next/router';
 
 import { useEffect, useState } from 'react';
 
-import WorkoutPic from '../../../public/navbarIcon/IMG_0511.PNG';
-import DashboardPic from '../../../public/navbarIcon/IMG_0512.PNG';
-import HistoryPic from '../../../public/navbarIcon/IMG_0513.PNG';
-
 export default function BottomNav() {
 	const router = useRouter();
 	const [pathMonitor, setPathMonitor] = useState({
@@ -51,7 +47,7 @@ export default function BottomNav() {
 					<Link href="/dashboard/">
 						<div className="w-9 h-9 relative">
 							<Image
-								src={DashboardPic}
+								src="/navbarIcon/IMG_0512.PNG"
 								sizes="(max-width: 768px) 5vw"
 								fill
 								className={
@@ -68,7 +64,7 @@ export default function BottomNav() {
 					<Link href="/engine/Workout/">
 						<div className="w-9 h-9 relative">
 							<Image
-								src={WorkoutPic}
+								src="/navbarIcon/IMG_0511.PNG"
 								sizes="(max-width: 768px) 5vw"
 								fill
 								className={
@@ -85,7 +81,7 @@ export default function BottomNav() {
 					<Link href="/history/">
 						<div className="w-9 h-9 relative">
 							<Image
-								src={HistoryPic}
+								src="/navbarIcon/IMG_0513.PNG"
 								sizes="(max-width: 768px) 5vw"
 								fill
 								className={

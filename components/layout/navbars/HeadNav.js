@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 
-import SBDLogo from '../../../public/navbarIcon/IMG_0514.PNG';
-
 import userDefaultAvatar from '../../../public/rank_avatars/user_default_avatar.jpeg';
 import useAuthStore from '../../../stores/authentication/useAuthStore';
 import useUserStore from '../../../stores/authentication/useUserStore';
@@ -38,7 +36,7 @@ export default function HeadNav() {
 							<Link href="/">
 								<div className="w-20 h-12 relative">
 									<Image
-										src={SBDLogo}
+										src="/navbarIcon/IMG_0514.PNG"
 										sizes="(max-width: 768px) 5vw"
 										fill
 										className="object-cover overflow-hidden"
@@ -58,7 +56,7 @@ export default function HeadNav() {
 											src={
 												user.avatar_url
 													? process.env.NEXT_PUBLIC_MEDIA_HOST + user.avatar_url
-													: userDefaultAvatar
+													: '/rank_avatars/user_default_avatar.jpeg'
 											}
 											width={12}
 											height={12}
