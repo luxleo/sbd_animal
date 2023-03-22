@@ -55,10 +55,7 @@ export default function HeadNav() {
 											className="h-12 w-12 rounded-full md:h-8 md:w-8 "
 											src={
 												user.avatar_url
-													? process.env.NODE_ENV === 'development'
-														? process.env.NEXT_PUBLIC_MEDIA_HOST +
-														  user.avatar_url
-														: user.avatar_url
+													? user.avatar_url
 													: '/rank_avatars/user_default_avatar.jpeg'
 											}
 											width={12}

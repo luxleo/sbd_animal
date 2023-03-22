@@ -22,7 +22,7 @@ const nextConfig = {
 			{
 				protocol: 'https',
 				hostname: 'sbd-animal-bucket.s3.ap-northeast-2.amazonaws.com',
-				pathname: '/media/accounts',
+				pathname: '/media/accounts/**',
 			},
 		],
 	},
