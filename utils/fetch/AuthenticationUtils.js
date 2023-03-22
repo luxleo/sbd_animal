@@ -8,7 +8,7 @@ import myAxios from './customAxios';
  * @returns
  */
 export async function getVerificationCode(username, email_address) {
-	const url = 'verification_code';
+	const url = 'accounts/verification_code';
 	const res = await myAxios
 		.get(url, {
 			params: {
