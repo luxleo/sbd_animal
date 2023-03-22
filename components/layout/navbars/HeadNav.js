@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 
-import userDefaultAvatar from '../../../public/rank_avatars/user_default_avatar.jpeg';
 import useAuthStore from '../../../stores/authentication/useAuthStore';
 import useUserStore from '../../../stores/authentication/useUserStore';
 
@@ -39,6 +38,7 @@ export default function HeadNav() {
 										src="/navbarIcon/IMG_0514.PNG"
 										sizes="(max-width: 768px) 5vw"
 										fill
+										placeholder="logo"
 										className="object-cover overflow-hidden"
 										alt="Rank Avatar"
 										priority

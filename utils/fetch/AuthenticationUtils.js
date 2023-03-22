@@ -43,9 +43,11 @@ export async function postCreateUser(userInfo) {
 export async function getJwtAfterLogin(signInInfo) {
 	const url = 'accounts/login/';
 	const res = await myAxios.post(url, signInInfo).then((res) => {
+		console.log('cookie', res, res.headers['set-cookie']);
 		return res;
 	});
 	// setAuthState({ authState: 'authenticated' });
+
 	return res;
 }
 /**

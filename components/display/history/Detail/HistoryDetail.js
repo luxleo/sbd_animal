@@ -4,37 +4,31 @@ import { useState, useEffect } from 'react';
 
 import HistoryRep from './HistoryRep';
 
-import mousePic from '../../../../public/rank_avatars/avatar_rat.png';
-import rabbitPic from '../../../../public/rank_avatars/avatar_rabbit.png';
-import foxPic from '../../../../public/rank_avatars/avatar_fox.png';
-import wolfPic from '../../../../public/rank_avatars/avatar_wolf.png';
-import tigerPic from '../../../../public/rank_avatars/avatar_tiger.png';
-import dragonPic from '../../../../public/rank_avatars/avatar_dragon.png';
 import { deleteLog } from '../../../../utils/fetch/workout/log';
 
 export default function HistoryDetail({ log, reps }) {
-	const [rankPhoto, setRankPhoto] = useState(wolfPic);
+	const [rankPhoto, setRankPhoto] = useState('/rank_avatars/avatar_wolf.png');
 
 	const getRankImage = (percentile) => {
 		const numPercentile = Number(percentile);
 		switch (true) {
 			case numPercentile < 5:
-				setRankPhoto(mousePic);
+				setRankPhoto('/rank_avatars/avatar_rat.png');
 				break;
 			case numPercentile < 20:
-				setRankPhoto(rabbitPic);
+				setRankPhoto('/rank_avatars/avatar_rabbit.png');
 				break;
 			case numPercentile < 50:
-				setRankPhoto(foxPic);
+				setRankPhoto('/rank_avatars/avatar_fox.png');
 				break;
 			case numPercentile < 80:
-				setRankPhoto(wolfPic);
+				setRankPhoto('/rank_avatars/avatar_wolf.png');
 				break;
 			case numPercentile < 95:
-				setRankPhoto(tigerPic);
+				setRankPhoto('/rank_avatars/avatar_tiger.png');
 				break;
 			case numPercentile < 101:
-				setRankPhoto(dragonPic);
+				setRankPhoto('/rank_avatars/avatar_dragon.png');
 				break;
 		}
 	};
