@@ -19,8 +19,12 @@ const nextConfig = {
 				port: '8000',
 				pathname: '/accounts/**',
 			},
+			{
+				protocol: 'https',
+				hostname: 'sbd-animal-bucket.s3.ap-northeast-2.amazonaws.com',
+				pathname: '/media/accounts',
+			},
 		],
-		domains: ['sbd-animal-bucket.s3.amazonaws.com'],
 	},
 };
 
