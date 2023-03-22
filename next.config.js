@@ -20,7 +20,7 @@ const nextConfig = {
 				pathname: '/accounts/**',
 			},
 		],
-		domains: ['https://sbd-animal-bucket.s3.amazonaws.com'],
+		domains: ['sbd-animal-bucket.s3.amazonaws.com'],
 	},
 };
 
